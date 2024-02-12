@@ -75,7 +75,7 @@ displayFaceBox = (box)=>{
   }
   onButtonSubmit =()=>{
     this.setState({imageurl: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://mybackend-7lb3.onrender.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -87,7 +87,7 @@ displayFaceBox = (box)=>{
         if (result) {
           console.log(result)
           
-          fetch('http://localhost:3000/image', {
+          fetch('https://mybackend-7lb3.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
